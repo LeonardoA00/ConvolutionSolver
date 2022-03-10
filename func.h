@@ -1,6 +1,7 @@
 #ifndef _FUNC_H_
 #define _FUNC_H_
 
+    #include <stdio.h>
     #include <stdlib.h>
     
     /*
@@ -22,6 +23,9 @@
     int findmax(FUNC* f);
     int findmin(FUNC* f);
 
+    FUNC* conv(FUNC* x, FUNC* h);
+
+    void debug(FUNC* f);
 
 
 #endif

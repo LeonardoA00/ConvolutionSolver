@@ -2,9 +2,17 @@
 #include "func.h"
 
 int main() {
-    cli_test();
-    int val[10] = {1, 2, 3, 4, 5, 6, 5, 4, 3, 2};
-    FUNC* f = func(val, -2, 7);
-    plot(f);
-    return 1;
+    int x[5] = {1, 1, 1, 1, 1};
+    int h[2] = {1, -1};
+    FUNC* fx = func(x, 0, 4);
+    FUNC* fh = func(h, 0, 1);
+    plot(fx);
+    plot(fh);
+    FUNC* fc = conv(fx, fh);
+    plot(fc);
+
+    debug(fx);
+    debug(fh);
+    debug(fc);
+    return 0;
 }
